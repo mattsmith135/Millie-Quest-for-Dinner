@@ -1,0 +1,6 @@
+// Resource bundle used for loading resources
+BITMAP,air,air.png
+BITMAP,grass,grass.png
+BITMAP,dirt,dirt.png
+BITMAP,box,box.png
+BITMAP,dog,dog.png

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SplashKitUI/1.0.0": {
+        "dependencies": {
+          "Millie-Quest-for-Dinner": "1.0.0"
+        },
+        "runtime": {
+          "SplashKitUI.dll": {}
+        }
+      },
+      "Millie-Quest-for-Dinner/1.0.0": {
+        "runtime": {
+          "Millie-Quest-for-Dinner.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SplashKitUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Millie-Quest-for-Dinner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

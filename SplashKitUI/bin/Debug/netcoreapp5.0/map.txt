@@ -1,0 +1,37 @@
+# Text file used for loading game 
+# Legend: 
+# 'o' = air tile 
+# 'g' = grass tile
+# 'd' = dirt tile 
+# 'B' = box tile
+# 'a' = aerial enemy
+# 'd' = divebomb enemy
+# 'm' = marksman enemy
+# 'D' = dinner item
+# 'j' = django item
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooooBoooooooooooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooBBoooooooooooooooooooooooooooooooooooooooooooooooooo
+ooooooooooooooBBBoooooooooooooooooooooooooooooooooooooooooooooooooo
+ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+
+
+
+
+
+
+
