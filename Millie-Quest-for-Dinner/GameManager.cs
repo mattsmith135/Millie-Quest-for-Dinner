@@ -19,7 +19,7 @@ namespace Millie_Quest_for_Dinner
             _collidableObjects = new List<ICollidable>();
 
             RegisterGameObjects();
-            LoadAssets(); 
+            LoadAssets();
         }
 
         public void AddObject(GameObject obj)
@@ -58,7 +58,14 @@ namespace Millie_Quest_for_Dinner
 
         public void Draw()
         {
+            // dynamic objects need to be drawn after static ones 
             foreach (var obj in _allObjects)
+            {
+                if (obj is not DynamicObject)
+                    obj.Draw(); 
+            }
+
+            foreach (var obj in _dynamicObjects)
             {
                 obj.Draw(); 
             }
@@ -75,7 +82,8 @@ namespace Millie_Quest_for_Dinner
             GameObject.RegisterGameObject('e', typeof(DivebombEnemy));
             GameObject.RegisterGameObject('m', typeof(MarksmanEnemy));
             GameObject.RegisterGameObject('D', typeof(Dinner));
-            GameObject.RegisterGameObject('j', typeof(Django)); 
+            GameObject.RegisterGameObject('j', typeof(Django));
+            GameObject.RegisterGameObject('!', typeof(Player)); 
         }
     }
 }

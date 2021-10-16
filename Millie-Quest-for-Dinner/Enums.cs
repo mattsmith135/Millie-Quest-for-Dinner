@@ -14,4 +14,10 @@ namespace Millie_Quest_for_Dinner
         Dirt,
         Box
     }
+
+    public enum PlayerState
+    {
+        PlayerAlive,
+        PlayerDead
+    }
 }

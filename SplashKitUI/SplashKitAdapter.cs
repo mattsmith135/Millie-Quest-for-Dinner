@@ -35,9 +35,14 @@ namespace SplashKitUI
             SplashKit.DrawBitmap(SplashKit.BitmapNamed(gameObject.GetType().ToString().ToLower()), gameObject.X, gameObject.Y);
         }
 
+        public override void DrawPlayer(Player player)
+        {
+            SplashKit.DrawBitmap(SplashKit.BitmapNamed(player.PlayerState.ToString().ToLower()), player.X, player.Y); 
+        }
+
         public override void OpenGameWindow()
         {
-            new Window("Millie Magpie Slayer", Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT); 
+            new Window("Millie: Quest for Dinner", Settings.WINDOW_WIDTH, Settings.WINDOW_HEIGHT); 
         }
 
         public override void ClearScreen()
@@ -47,7 +52,7 @@ namespace SplashKitUI
 
         public override bool WindowCloseRequested()
         {
-            return SplashKit.WindowCloseRequested("Millie Magpie Slayer"); 
+            return SplashKit.WindowCloseRequested("Millie: Quest for Dinner"); 
         }
 
         public override void LoadAssets()

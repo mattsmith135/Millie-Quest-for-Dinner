@@ -8,9 +8,19 @@ namespace Millie_Quest_for_Dinner
 {
     public class Player : DynamicObject, ICollidable
     {
+        private PlayerState _playerState; 
+
+        public PlayerState PlayerState
+        {
+            get
+            {
+                return _playerState; 
+            }
+        }
+
         public Player()
         {
-        
+            _playerState = PlayerState.PlayerAlive;
         }
 
         public void OnCollision(ICollidable collidedWith) 
@@ -25,7 +35,7 @@ namespace Millie_Quest_for_Dinner
 
         public override void Draw()
         {
-            
+            UIAdapter.Instance.DrawPlayer(this);
         }
     }
 }

@@ -83,8 +83,19 @@ namespace Millie_Quest_for_Dinner
                 {
                     kind = line[x];
 
-                    Tile tile = new Tile(kind);
-                    
+                    Tile tile = new Tile();
+
+                    if (tile.TileTypeRegistryKeys.Contains<char>(kind))
+                    {
+                        tile.AssignTileType(kind);
+                    } else
+                    {
+                        tile.AssignTileType('o'); // create an 'air' tile by default
+                        g = GameObject.CreateGameObject(kind);
+                        g.LoadWorldPosition(y, x);
+                        _objects.Add(g);
+                    }
+
                     try
                     {
                         _tiles[y, x] = tile;
@@ -94,15 +105,6 @@ namespace Millie_Quest_for_Dinner
                     catch (IndexOutOfRangeException e)
                     {
                         Console.WriteLine(e.Message); 
-                    }
-
-                    // execute if the char kind does not define a tile type
-                    // ie. if we're not making a tile, then we must be making an entity
-                    if (!tile.TileTypeRegistryKeys.Contains<char>(kind))
-                    {
-                        g = GameObject.CreateGameObject(kind);
-                        g.LoadWorldPosition(y, x);
-                        _objects.Add(g);
                     }
                 }
             }

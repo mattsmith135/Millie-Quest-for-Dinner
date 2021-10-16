@@ -32,6 +32,8 @@ namespace Millie_Quest_for_Dinner
 
         public abstract void DrawGameObject(GameObject gameObject);
 
+        public abstract void DrawPlayer(Player player); 
+
         public abstract void OpenGameWindow();
 
         public abstract void ClearScreen();

@@ -27,14 +27,12 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
-        public Tile(char tileKind)
+        public Tile()
         {
             _tileTypeRegistry.Add('o', TileType.Air);
             _tileTypeRegistry.Add('g', TileType.Grass);
             _tileTypeRegistry.Add('d', TileType.Dirt);
             _tileTypeRegistry.Add('B', TileType.Box); 
-
-            AssignTileType(tileKind);
         }
 
         public void OnCollision(ICollidable collidedWith)
@@ -47,7 +45,7 @@ namespace Millie_Quest_for_Dinner
             UIAdapter.Instance.DrawTile(this);    
         }
 
-        private void AssignTileType(char tileKind)
+        public void AssignTileType(char tileKind)
         {
             List<char> keysList = new List<char>(); 
             

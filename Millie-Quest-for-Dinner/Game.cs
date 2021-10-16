@@ -29,7 +29,7 @@ namespace Millie_Quest_for_Dinner
                 UIAdapter.Instance.ClearScreen();
 
                 gm.Update();
-                gm.Draw(); 
+                gm.Draw();
                 UIAdapter.Instance.RefreshScreen(); 
             } while (!UIAdapter.Instance.WindowCloseRequested());
         }
