@@ -32,12 +32,12 @@ namespace SplashKitUI
 
         public override void DrawGameObject(GameObject gameObject)
         {
-            SplashKit.DrawBitmap(SplashKit.BitmapNamed(gameObject.GetType().ToString().ToLower()), gameObject.X, gameObject.Y);
+            SplashKit.DrawBitmap(SplashKit.BitmapNamed(gameObject.GetType().Name.ToLower()), gameObject.X, gameObject.Y);
         }
 
-        public override void DrawPlayer(Player player)
+        public override bool HasCollided(ICollidable c1, ICollidable c2)
         {
-            SplashKit.DrawBitmap(SplashKit.BitmapNamed(player.PlayerState.ToString().ToLower()), player.X, player.Y); 
+            return SplashKit.BitmapCollision(SplashKit.BitmapNamed(c1.GetType().Name.ToLower()), c1.X, c1.Y, SplashKit.BitmapNamed(c2.GetType().Name.ToLower()), c2.X, c2.Y); 
         }
 
         public override void OpenGameWindow()

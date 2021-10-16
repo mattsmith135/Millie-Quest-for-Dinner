@@ -32,7 +32,7 @@ namespace Millie_Quest_for_Dinner
 
         public abstract void DrawGameObject(GameObject gameObject);
 
-        public abstract void DrawPlayer(Player player); 
+        public abstract bool HasCollided(ICollidable c1, ICollidable c2); 
 
         public abstract void OpenGameWindow();
 

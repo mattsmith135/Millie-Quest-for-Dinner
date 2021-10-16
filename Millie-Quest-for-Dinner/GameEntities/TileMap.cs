@@ -90,7 +90,7 @@ namespace Millie_Quest_for_Dinner
                         tile.AssignTileType(kind);
                     } else
                     {
-                        tile.AssignTileType('o'); // create an 'air' tile by default
+                        tile.AssignTileType('o'); // if a tile type is not specified, create an air tile by default
                         g = GameObject.CreateGameObject(kind);
                         g.LoadWorldPosition(y, x);
                         _objects.Add(g);

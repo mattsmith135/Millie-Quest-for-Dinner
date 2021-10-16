@@ -8,6 +8,9 @@ namespace Millie_Quest_for_Dinner
 {
     public interface ICollidable
     {
-        void OnCollision(ICollidable collidedWith); 
+        void OnCollision(ICollidable collidedWith);
+
+        int X { get; }
+        int Y { get; }
     }
 }

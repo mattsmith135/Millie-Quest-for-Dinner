@@ -25,7 +25,7 @@ namespace Millie_Quest_for_Dinner
 
         public void OnCollision(ICollidable collidedWith) 
         {
-
+            // UIAdapter.Instance.HasCollided(this, collidedWith))
         }
 
         public override void Update()
@@ -35,7 +35,7 @@ namespace Millie_Quest_for_Dinner
 
         public override void Draw()
         {
-            UIAdapter.Instance.DrawPlayer(this);
+            UIAdapter.Instance.DrawGameObject(this);
         }
     }
 }
