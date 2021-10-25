@@ -11,6 +11,8 @@ namespace Millie_Quest_for_Dinner
         public static int TILESIZE { get; private set; }
         public static int WINDOW_WIDTH { get; private set; }
         public static int WINDOW_HEIGHT { get; private set; }
+        public static int PLAYERSPEED { get; private set; }
+
 
         static Settings()
         {
@@ -21,7 +23,8 @@ namespace Millie_Quest_for_Dinner
         {
             TILESIZE = 32;
             WINDOW_WIDTH = 800;
-            WINDOW_HEIGHT = 600; 
+            WINDOW_HEIGHT = 600;
+            PLAYERSPEED = 3; 
         }
     }
 }

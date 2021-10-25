@@ -37,7 +37,7 @@ namespace Millie_Quest_for_Dinner
 
         public void OnCollision(ICollidable collidedWith)
         {
-            // UIAdapter.Instance.HasCollided(this, collidedWith); 
+
         }
 
         public override void Draw()
@@ -69,8 +69,7 @@ namespace Millie_Quest_for_Dinner
             if (_tileType == TileType.Air || _tileType == TileType.None)
             {
                 Layer = -1;
-            }
-            else
+            } else
             {
                 Layer = 1;
             }

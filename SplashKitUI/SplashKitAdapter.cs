@@ -37,16 +37,28 @@ namespace SplashKitUI
 
         public override bool HasCollided(ICollidable c1, ICollidable c2)
         {
-            
-            return SplashKit.BitmapCollision(
-                SplashKit.BitmapNamed(c1.BitmapName), 
-                c1.X, 
-                c1.Y, 
-                SplashKit.BitmapNamed(c2.BitmapName), 
-                c2.X, 
-                c2.Y
-                );
+            return SplashKit.BitmapCollision(SplashKit.BitmapNamed(c1.BitmapName), c1.X, c1.Y, SplashKit.BitmapNamed(c2.BitmapName), c2.X, c2.Y);
         }
+
+        public override string GetKeyDown()
+        {
+            if (SplashKit.KeyDown(KeyCode.LeftKey))
+            {
+                return "left"; 
+            } else if (SplashKit.KeyDown(KeyCode.RightKey))
+            {
+                return "right"; 
+            } else if (SplashKit.KeyDown(KeyCode.UpKey))
+            {
+                return "up"; 
+            } else if (SplashKit.KeyDown(KeyCode.DownKey))
+            {
+                return "down"; 
+            }
+
+            return null;
+            
+    }
 
         public override void OpenGameWindow()
         {

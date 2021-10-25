@@ -67,3 +67,4 @@ C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Deb
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.AssemblyInfo.cs
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.csproj.CoreCompileInputs.cache
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.genruntimeconfig.cache
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.csproj.CopyComplete

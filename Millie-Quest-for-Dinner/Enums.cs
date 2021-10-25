@@ -13,11 +13,5 @@ namespace Millie_Quest_for_Dinner
         Air,
         Dirt,
         Box
-    }
-
-    public enum PlayerState
-    {
-        PlayerAlive,
-        PlayerDead
-    }
+    }   
 }
