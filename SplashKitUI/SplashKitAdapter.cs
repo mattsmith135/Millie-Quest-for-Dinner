@@ -27,17 +27,25 @@ namespace SplashKitUI
 
         public override void DrawTile(Tile tile)
         {
-            SplashKit.DrawBitmap(SplashKit.BitmapNamed(tile.TileType.ToString().ToLower()), tile.X, tile.Y);
+            SplashKit.DrawBitmap(SplashKit.BitmapNamed(tile.BitmapName), tile.X, tile.Y);
         }
 
         public override void DrawGameObject(GameObject gameObject)
         {
-            SplashKit.DrawBitmap(SplashKit.BitmapNamed(gameObject.GetType().Name.ToLower()), gameObject.X, gameObject.Y);
+            SplashKit.DrawBitmap(SplashKit.BitmapNamed(gameObject.BitmapName), gameObject.X, gameObject.Y);
         }
 
         public override bool HasCollided(ICollidable c1, ICollidable c2)
         {
-            return SplashKit.BitmapCollision(SplashKit.BitmapNamed(c1.GetType().Name.ToLower()), c1.X, c1.Y, SplashKit.BitmapNamed(c2.GetType().Name.ToLower()), c2.X, c2.Y); 
+            
+            return SplashKit.BitmapCollision(
+                SplashKit.BitmapNamed(c1.BitmapName), 
+                c1.X, 
+                c1.Y, 
+                SplashKit.BitmapNamed(c2.BitmapName), 
+                c2.X, 
+                c2.Y
+                );
         }
 
         public override void OpenGameWindow()

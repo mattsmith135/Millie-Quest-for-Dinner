@@ -25,7 +25,7 @@ namespace Millie_Quest_for_Dinner
 
         public void OnCollision(ICollidable collidedWith) 
         {
-            // UIAdapter.Instance.HasCollided(this, collidedWith))
+            Console.WriteLine(UIAdapter.Instance.HasCollided(this, collidedWith));
         }
 
         public override void Update()

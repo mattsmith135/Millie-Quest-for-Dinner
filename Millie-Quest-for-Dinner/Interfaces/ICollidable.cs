@@ -12,5 +12,8 @@ namespace Millie_Quest_for_Dinner
 
         int X { get; }
         int Y { get; }
+        int Layer { get; set; } 
+        
+        string BitmapName { get; set; }
     }
 }

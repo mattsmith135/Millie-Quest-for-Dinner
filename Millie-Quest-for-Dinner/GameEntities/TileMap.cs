@@ -77,7 +77,7 @@ namespace Millie_Quest_for_Dinner
 
             for (int y = 0; y < _rows; y++)
             {
-                string line = lines[y]; 
+                string line = lines[y];
 
                 for (int x = 0; x < _cols; x++)
                 {
@@ -92,6 +92,7 @@ namespace Millie_Quest_for_Dinner
                     {
                         tile.AssignTileType('o'); // if a tile type is not specified, create an air tile by default
                         g = GameObject.CreateGameObject(kind);
+                        g.Initialize(); 
                         g.LoadWorldPosition(y, x);
                         _objects.Add(g);
                     }
@@ -99,6 +100,7 @@ namespace Millie_Quest_for_Dinner
                     try
                     {
                         _tiles[y, x] = tile;
+                        tile.Initialize();
                         tile.LoadWorldPosition(y, x);
                         _objects.Add(tile);
                     }
