@@ -18,9 +18,25 @@ namespace Millie_Quest_for_Dinner
 
         }
 
-        public void Move()
+        public void OnKeyBoardInput(ControlType type)
         {
+            switch (type)
+            {
+                case ControlType.Left or ControlType.Right or ControlType.Up or ControlType.Down:
+                    PhysicsController.PlayerMove(this, (Direction)type);
+                    break;
+            }
+        }
 
+        public void Move(Direction dir)
+        {
+            switch (dir)
+            {
+                case Direction.Left: X -= Settings.PLAYERSPEED; break;
+                case Direction.Right: X += Settings.PLAYERSPEED; break;
+                case Direction.Up: Y -= Settings.PLAYERSPEED; break;
+                case Direction.Down: Y += Settings.PLAYERSPEED; break; 
+            }
         }
 
         public override void Update()

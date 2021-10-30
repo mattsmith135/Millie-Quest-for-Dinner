@@ -6,7 +6,8 @@ namespace Millie_Quest_for_Dinner
     {
         public static void Main()
         {
-            Console.WriteLine("Millie: Quest for Dinner"); 
+            Console.WriteLine("Millie: Quest for Dinner");
+
         }
     }
 }

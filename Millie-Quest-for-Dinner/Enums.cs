@@ -13,5 +13,22 @@ namespace Millie_Quest_for_Dinner
         Air,
         Dirt,
         Box
-    }   
+    }  
+    
+    public enum Direction
+    {
+        Left,
+        Right,
+        Up,
+        Down
+    }
+
+    public enum ControlType
+    {
+        None,
+        Left,
+        Right,
+        Up,
+        Down
+    }
 }

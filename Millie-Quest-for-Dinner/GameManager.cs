@@ -11,7 +11,6 @@ namespace Millie_Quest_for_Dinner
         private List<GameObject> _allObjects;
         private List<DynamicObject> _dynamicObjects;
         private List<ICollidable> _collidableObjects;
-        private PhysicsController _physicsController;  
 
 
         public GameManager()
@@ -19,8 +18,6 @@ namespace Millie_Quest_for_Dinner
             _allObjects = new List<GameObject>();
             _dynamicObjects = new List<DynamicObject>();
             _collidableObjects = new List<ICollidable>();
-            _physicsController = new PhysicsController(); 
-
 
             RegisterGameObjects();
             LoadAssets();
@@ -46,7 +43,7 @@ namespace Millie_Quest_for_Dinner
             foreach (var obj in _dynamicObjects)
                 obj.Update();
 
-            _physicsController.CheckCollisions(_collidableObjects); 
+            PhysicsController.CheckCollisions(_collidableObjects); 
         }
 
         public void Draw()

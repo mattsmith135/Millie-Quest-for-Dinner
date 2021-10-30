@@ -34,7 +34,7 @@ namespace Millie_Quest_for_Dinner
 
         public abstract bool HasCollided(ICollidable c1, ICollidable c2);
 
-        public abstract string GetKeyDown(); 
+        public abstract ControlType GetKeyDown(); 
         
         public abstract void OpenGameWindow();
 

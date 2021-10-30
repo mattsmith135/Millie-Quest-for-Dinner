@@ -40,24 +40,23 @@ namespace SplashKitUI
             return SplashKit.BitmapCollision(SplashKit.BitmapNamed(c1.BitmapName), c1.X, c1.Y, SplashKit.BitmapNamed(c2.BitmapName), c2.X, c2.Y);
         }
 
-        public override string GetKeyDown()
+        public override ControlType GetKeyDown()
         {
             if (SplashKit.KeyDown(KeyCode.LeftKey))
             {
-                return "left"; 
+                return ControlType.Left; 
             } else if (SplashKit.KeyDown(KeyCode.RightKey))
             {
-                return "right"; 
+                return ControlType.Right; 
             } else if (SplashKit.KeyDown(KeyCode.UpKey))
             {
-                return "up"; 
+                return ControlType.Up; 
             } else if (SplashKit.KeyDown(KeyCode.DownKey))
             {
-                return "down"; 
+                return ControlType.Down; 
             }
 
-            return null;
-            
+            return ControlType.None;
     }
 
         public override void OpenGameWindow()
