@@ -8,9 +8,29 @@ namespace Millie_Quest_for_Dinner
 {
     public class PhysicsController
     {
+        private static Player _p;
+
         static PhysicsController()
         {
 
+        }
+
+        public static Player Player
+        {
+            get
+            {
+                return _p; 
+            }
+            set
+            {
+                _p = value; 
+            }
+        }
+
+        public static void UserControl()
+        {
+            ControlType controlType = UIAdapter.Instance.GetKeyDown();
+            Player.OnKeyBoardInput(controlType); 
         }
 
         public static void CheckCollisions(List<ICollidable> collidableObjects)
@@ -30,16 +50,16 @@ namespace Millie_Quest_for_Dinner
                     }
                 }
             }
-        }
+        }    
 
-        public static void PlayerMove(Player p, Direction dir)
+        public static void PlayerMove(Direction dir)
         {
-            bool successful = true;
+            // basically a wrapper method at this point 
+            // need to decide between: 
+            // - handling player collision through OnCollision
+            // - handling it in this method (checking if move is valid beforehand)
 
-            // check if new location is occupied
-
-            // if new location not occupied, move player 
-            if (successful) p.Move(dir);  
+            _p.Move(dir); 
         }
 
         public void Gravity()

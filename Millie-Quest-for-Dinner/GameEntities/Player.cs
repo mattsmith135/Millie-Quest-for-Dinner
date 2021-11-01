@@ -8,9 +8,10 @@ namespace Millie_Quest_for_Dinner
 {
     public class Player : DynamicObject, ICollidable
     {
+
         public Player()
         {
-
+            PhysicsController.Player = this;
         }
 
         public void OnCollision(ICollidable collidedWith) 
@@ -18,12 +19,13 @@ namespace Millie_Quest_for_Dinner
 
         }
 
+
         public void OnKeyBoardInput(ControlType type)
         {
             switch (type)
             {
                 case ControlType.Left or ControlType.Right or ControlType.Up or ControlType.Down:
-                    PhysicsController.PlayerMove(this, (Direction)type);
+                    PhysicsController.PlayerMove((Direction)type);
                     break;
             }
         }

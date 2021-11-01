@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics; 
 
 namespace Millie_Quest_for_Dinner
 {
@@ -11,7 +12,6 @@ namespace Millie_Quest_for_Dinner
         private List<GameObject> _allObjects;
         private List<DynamicObject> _dynamicObjects;
         private List<ICollidable> _collidableObjects;
-
 
         public GameManager()
         {
@@ -43,7 +43,7 @@ namespace Millie_Quest_for_Dinner
             foreach (var obj in _dynamicObjects)
                 obj.Update();
 
-            PhysicsController.CheckCollisions(_collidableObjects); 
+            // PhysicsController.CheckCollisions(_collidableObjects); 
         }
 
         public void Draw()

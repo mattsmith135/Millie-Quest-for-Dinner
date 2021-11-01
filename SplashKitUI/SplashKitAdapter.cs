@@ -17,7 +17,8 @@ namespace SplashKitUI
 
         public override void ProcessInput()
         {
-            SplashKit.ProcessEvents(); 
+            SplashKit.ProcessEvents();
+            PhysicsController.UserControl(); 
         }
 
         public override void RefreshScreen()

@@ -24,7 +24,7 @@ namespace Millie_Quest_for_Dinner
             TILESIZE = 32;
             WINDOW_WIDTH = 800;
             WINDOW_HEIGHT = 600;
-            PLAYERSPEED = 3; 
+            PLAYERSPEED = 1; 
         }
     }
 }

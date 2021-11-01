@@ -17,6 +17,7 @@ namespace Millie_Quest_for_Dinner
     
     public enum Direction
     {
+        None,
         Left,
         Right,
         Up,
