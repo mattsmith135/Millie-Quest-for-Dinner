@@ -30,7 +30,7 @@ namespace Millie_Quest_for_Dinner
         public static void UserControl()
         {
             ControlType controlType = UIAdapter.Instance.GetKeyDown();
-            Player.OnKeyBoardInput(controlType); 
+            Player.OnKeyBoardInput(controlType);
         }
 
         public static void CheckCollisions(List<ICollidable> collidableObjects)

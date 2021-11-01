@@ -8,8 +8,8 @@ namespace Millie_Quest_for_Dinner
 {
     public class Camera
     {
-        private int _x;
-        private int _y;
+        private double _x;
+        private double _y;
 
         /* 
         private int _width;

@@ -10,8 +10,8 @@ namespace Millie_Quest_for_Dinner
     {
         void OnCollision(ICollidable collidedWith);
 
-        int X { get; }
-        int Y { get; }
+        double X { get; }
+        double Y { get; }
         int Layer { get; set; } 
         
         string BitmapName { get; set; }

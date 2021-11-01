@@ -32,12 +32,22 @@ namespace Millie_Quest_for_Dinner
 
         public void Move(Direction dir)
         {
+            /*
+            switch (dir)
+            {
+                case Direction.Left: X -= Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
+                case Direction.Right: X += Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
+                case Direction.Up: Y -= Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
+                case Direction.Down: Y += Settings.PLAYERSPEED * (double)Watch.DeltaTime; break; 
+            }
+            */
+
             switch (dir)
             {
                 case Direction.Left: X -= Settings.PLAYERSPEED; break;
                 case Direction.Right: X += Settings.PLAYERSPEED; break;
                 case Direction.Up: Y -= Settings.PLAYERSPEED; break;
-                case Direction.Down: Y += Settings.PLAYERSPEED; break; 
+                case Direction.Down: Y += Settings.PLAYERSPEED; break;
             }
         }
 

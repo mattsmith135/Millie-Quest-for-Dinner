@@ -8,10 +8,10 @@ namespace Millie_Quest_for_Dinner
 {
     public abstract class GameObject
     {
-        private int _x;
-        private int _y;
+        private double _x;
+        private double _y;
         private int _layer;
-        private string _bitmapName; 
+        private string _bitmapName;
         private static Dictionary<char, Type> _gameObjectRegistry = new Dictionary<char, Type>(); 
 
         public static void RegisterGameObject(char name, Type t)
@@ -29,7 +29,7 @@ namespace Millie_Quest_for_Dinner
 
         }
 
-        public int X
+        public double X
         {
             get
             {
@@ -41,7 +41,7 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
-        public int Y
+        public double Y
         {
             get
             {
