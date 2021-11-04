@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "FldzA1IjogE1bhlCkaWmMcoKJU+noWu2Y/B45BjeuLC/DjgZTavnbqCmYFXzHlrWoALyImBa/muYQJBsgm4f5Q==",
+  "dgSpecHash": "DrDUPmxNTsgWqNWVJUaWxVp+LrZn/gnRWB29JOATBVGwRdPvAbBxFrp8OxhIOAfMehWXmpmmvtRDECX6Z7emlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\matth\\Desktop\\SWINBURNE\\OOP\\Millie-Quest-for-Dinner\\SplashKitUI\\SplashKitUI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\matth\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\matth\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\matth\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

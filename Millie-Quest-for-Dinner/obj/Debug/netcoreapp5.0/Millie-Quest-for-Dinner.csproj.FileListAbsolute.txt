@@ -16,3 +16,8 @@ C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Di
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\obj\Debug\netcoreapp5.0\ref\Millie-Quest-for-Dinner.dll
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\obj\Debug\netcoreapp5.0\Millie-Quest-for-Dinner.pdb
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\obj\Debug\netcoreapp5.0\Millie-Quest-for-Dinner.genruntimeconfig.cache
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\bin\Debug\netcoreapp5.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\bin\Debug\netcoreapp5.0\System.Drawing.Common.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\bin\Debug\netcoreapp5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\bin\Debug\netcoreapp5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\Millie-Quest-for-Dinner\bin\Debug\netcoreapp5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll

@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mpPSlW2cleYbqx2XJGG0SZmckp4np06jFI9rtKSZxAgMQhXXh9W2Xq6HH0mTQvkhxO7XqyrBMHSUbt1IQSU54w==",
+  "dgSpecHash": "oQ4uFNdhTI0CozFNzhPkGXTQkiGbyZd5v1JL6qy0leZK6d9vBu1fAmbcuOW0b8BGSIYOK8bCotHWCrmnNl2Anw==",
   "success": true,
   "projectFilePath": "C:\\Users\\matth\\Desktop\\SWINBURNE\\OOP\\Millie-Quest-for-Dinner\\Millie-Quest-for-Dinner\\Millie-Quest-for-Dinner.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\matth\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\matth\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\matth\\.nuget\\packages\\system.drawing.common\\5.0.2\\system.drawing.common.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

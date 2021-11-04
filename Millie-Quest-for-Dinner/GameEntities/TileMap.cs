@@ -7,14 +7,17 @@ using System.IO;
 
 namespace Millie_Quest_for_Dinner
 {
-    public class TileMap
+    /// <summary>
+    /// Singleton. Contains a list of tiles which represents the entire map
+    /// </summary>
+    public static class TileMap
     {
-        private int _cols;
-        private int _rows;
-        private Tile[,] _tiles; 
-        private List<GameObject> _objects = new List<GameObject>(); 
+        private static int _cols; // number of columns 
+        private static int _rows; // number of rows
+        private static Tile[,] _tiles; // 2D list of tiles 
+        private static List<GameObject> _objects = new List<GameObject>(); // list of objects contained in map
         
-        public List<GameObject> Objects
+        public static List<GameObject> Objects
         {
             get
             {
@@ -22,14 +25,14 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
-        public Tile[,] Tiles
+        public static Tile[,] Tiles
         {
             get
             {
                 return _tiles; 
             }
         }
-        public int Cols
+        public static int Cols
         {
             get
             {
@@ -37,7 +40,7 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
-        public int Rows
+        public static int Rows
         {
             get
             {
@@ -45,22 +48,30 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
-        public TileMap(string filename)
+        static TileMap()
         {
-            LoadMap(filename);
+
         }
 
-        public void LoadMap(string filename)
+        /// <summary>
+        /// Loads the map from a text file. When this method is complete,
+        /// the tile and object lists will be populated and column + row counts
+        /// will be recorded. 
+        /// </summary>
+        /// <param name="filename">Name of file containing map</param>
+        public static void LoadMap(string filename)
         {
             List<string> lines = new List<string>();
 
             foreach (string line in File.ReadLines(filename))
             {
+                // if a line is blank, don't add it to the lines list 
                 if (String.IsNullOrWhiteSpace(line))
                 {
                     break; 
                 }
 
+                // if a line starts with a '#', don't add it to the lines list as it is a comment
                 if (!line.StartsWith("#"))
                 {
                     lines.Add(line);
@@ -92,8 +103,8 @@ namespace Millie_Quest_for_Dinner
                     {
                         tile.AssignTileType('o'); // if a tile type is not specified, create an air tile by default
                         g = GameObject.CreateGameObject(kind);
-                        g.Initialize(); 
-                        g.LoadWorldPosition(y, x);
+                        g.Initialize(); // assigns a collision layer and bitmap name
+                        g.LoadWorldPosition(y, x); 
                         _objects.Add(g);
                     }
 
@@ -110,6 +121,26 @@ namespace Millie_Quest_for_Dinner
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// A method that returns a tile at a specific location. Used 
+        /// during collision checking to return tile where collision occured
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <returns>A tile object with x and y coordinates equal to the ones passed in</returns>
+        public static Tile GetTile(double x, double y)
+        {
+            foreach (Tile t in _tiles)
+            {
+                if (t.X == x && t.Y == y)
+                {
+                    return t; 
+                }
+            }
+
+            return null; 
         }
     }
 }

@@ -7,14 +7,18 @@ using System.Diagnostics;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// A class in charge of managing the game. A majority of the logic in this class relates to managing the game's objects
+    /// </summary>
     public class GameManager
     {
-        private List<GameObject> _allObjects;
-        private List<DynamicObject> _dynamicObjects;
-        private List<ICollidable> _collidableObjects;
+        private List<GameObject> _allObjects; // list of all game objects
+        private List<DynamicObject> _dynamicObjects; // list of all dynamic objects
+        private List<ICollidable> _collidableObjects; // list of all collidable objects
 
         public GameManager()
         {
+            // initialising lists
             _allObjects = new List<GameObject>();
             _dynamicObjects = new List<DynamicObject>();
             _collidableObjects = new List<ICollidable>();
@@ -23,6 +27,10 @@ namespace Millie_Quest_for_Dinner
             LoadAssets();
         }
 
+        /// <summary>
+        /// Adds an object to one or any number of gamemanager lists based on its type
+        /// </summary>
+        /// <param name="obj">A gameobject</param>
         public void AddObject(GameObject obj)
         {
             _allObjects.Add(obj);
@@ -38,6 +46,9 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
+        /// <summary>
+        /// Asks all dynamic objects to update
+        /// </summary>
         public void Update()
         {
             foreach (var obj in _dynamicObjects)
@@ -46,6 +57,9 @@ namespace Millie_Quest_for_Dinner
             // PhysicsController.CheckCollisions(_collidableObjects); 
         }
 
+        /// <summary>
+        /// Asks all objects to draw 
+        /// </summary>
         public void Draw()
         {
             // dynamic objects need to be drawn after static ones 
@@ -61,11 +75,17 @@ namespace Millie_Quest_for_Dinner
             }
         }
 
+        /// <summary>
+        /// Asks SplashKit to load all game assets from a resource bundle.
+        /// </summary>
         private void LoadAssets()
         {
             UIAdapter.Instance.LoadAssets(); 
         }
 
+        /// <summary>
+        /// Populates game object _gameObjectRegistry. 
+        /// </summary>
         private void RegisterGameObjects()
         {
             GameObject.RegisterGameObject('a', typeof(AerialEnemy));

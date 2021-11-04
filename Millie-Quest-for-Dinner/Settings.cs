@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// A class that contains all the settings for the game.
+    /// </summary>
     public record Settings
     {
         public static int TILESIZE { get; private set; }
@@ -24,7 +27,7 @@ namespace Millie_Quest_for_Dinner
             TILESIZE = 32;
             WINDOW_WIDTH = 800;
             WINDOW_HEIGHT = 600;
-            PLAYERSPEED = 0.8; 
+            PLAYERSPEED = 0.4; 
         }
     }
 }

@@ -7,6 +7,10 @@ using System.Diagnostics;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// The watch class is used to measure delta time. Delta time describes the time difference between the previous frame that was drawn and the current frame.
+    /// This is used to keep the game independent from the framerate.
+    /// </summary>
     public static class Watch
     {
         private static Stopwatch _stopwatch = new Stopwatch();

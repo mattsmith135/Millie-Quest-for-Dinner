@@ -67,4 +67,9 @@ C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Deb
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.AssemblyInfo.cs
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.csproj.CoreCompileInputs.cache
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.genruntimeconfig.cache
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\bin\Debug\netcoreapp5.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\bin\Debug\netcoreapp5.0\System.Drawing.Common.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\bin\Debug\netcoreapp5.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\bin\Debug\netcoreapp5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\bin\Debug\netcoreapp5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\matth\Desktop\SWINBURNE\OOP\Millie-Quest-for-Dinner\SplashKitUI\obj\Debug\netcoreapp5.0\SplashKitUI.csproj.CopyComplete

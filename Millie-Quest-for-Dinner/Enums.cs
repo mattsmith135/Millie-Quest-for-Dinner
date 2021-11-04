@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// All enumerations used in the program
+    /// </summary>
     public enum TileType
     {
         None,

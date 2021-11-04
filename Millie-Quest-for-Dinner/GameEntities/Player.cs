@@ -6,20 +6,32 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// Game player class.
+    /// </summary>
     public class Player : DynamicObject, ICollidable
     {
 
         public Player()
         {
+            // The physicscontroller is in charge of moving the player.
+            // Here I assign the player to the physicscontroller
             PhysicsController.Player = this;
         }
 
+        /// <summary>
+        /// Currently empty method. Intended as a response to collision with objects
+        /// </summary>
+        /// <param name="collidedWith">Object collided with</param>
         public void OnCollision(ICollidable collidedWith) 
         {
 
         }
 
-
+        /// <summary>
+        /// Asks the physicscontroller to move the player in a direction based on user input 
+        /// </summary>
+        /// <param name="type">User input</param>
         public void OnKeyBoardInput(ControlType type)
         {
             switch (type)
@@ -27,27 +39,6 @@ namespace Millie_Quest_for_Dinner
                 case ControlType.Left or ControlType.Right or ControlType.Up or ControlType.Down:
                     PhysicsController.PlayerMove((Direction)type);
                     break;
-            }
-        }
-
-        public void Move(Direction dir)
-        {
-            /*
-            switch (dir)
-            {
-                case Direction.Left: X -= Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
-                case Direction.Right: X += Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
-                case Direction.Up: Y -= Settings.PLAYERSPEED * (double)Watch.DeltaTime; break;
-                case Direction.Down: Y += Settings.PLAYERSPEED * (double)Watch.DeltaTime; break; 
-            }
-            */
-
-            switch (dir)
-            {
-                case Direction.Left: X -= Settings.PLAYERSPEED; break;
-                case Direction.Right: X += Settings.PLAYERSPEED; break;
-                case Direction.Up: Y -= Settings.PLAYERSPEED; break;
-                case Direction.Down: Y += Settings.PLAYERSPEED; break;
             }
         }
 

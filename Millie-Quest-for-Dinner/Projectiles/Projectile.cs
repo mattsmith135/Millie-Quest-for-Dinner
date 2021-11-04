@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// Parent projectile class that all projectiles inherit from 
+    /// </summary>
     public abstract class Projectile : DynamicObject, ICollidable
     {
         public Projectile()

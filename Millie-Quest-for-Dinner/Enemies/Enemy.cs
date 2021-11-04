@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// Parent enemy class that all enemies inherit from
+    /// </summary>
     public abstract class Enemy : DynamicObject, ICollidable
     {
         public Enemy()

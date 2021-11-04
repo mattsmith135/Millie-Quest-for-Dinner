@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// The UIAdapter is an example of the adapter pattern in action. 
+    /// It acts as a bridge between the main program and SplashKit, keeping them separate.
+    /// Abstract methods here are overriden in the SplashKitAdapter.cs
+    /// </summary>
     public abstract class UIAdapter
     {
         private static UIAdapter _instance;

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Millie_Quest_for_Dinner
 {
+    /// <summary>
+    /// Was meant to be a camera that follows the player. 
+    /// Did not have the time to finish this class
+    /// </summary>
     public class Camera
     {
         private double _x;
