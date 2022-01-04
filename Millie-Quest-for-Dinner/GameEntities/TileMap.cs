@@ -16,12 +16,12 @@ namespace Millie_Quest_for_Dinner
         private static int _rows; // number of rows
         private static Tile[,] _tiles; // 2D list of tiles 
         private static List<GameObject> _objects = new List<GameObject>(); // list of objects contained in map
-        
+
         public static List<GameObject> Objects
         {
             get
             {
-                return _objects; 
+                return _objects;
             }
         }
 
@@ -29,14 +29,14 @@ namespace Millie_Quest_for_Dinner
         {
             get
             {
-                return _tiles; 
+                return _tiles;
             }
         }
         public static int Cols
         {
             get
             {
-                return _cols; 
+                return _cols;
             }
         }
 
@@ -44,7 +44,7 @@ namespace Millie_Quest_for_Dinner
         {
             get
             {
-                return _rows; 
+                return _rows;
             }
         }
 
@@ -68,14 +68,14 @@ namespace Millie_Quest_for_Dinner
                 // if a line is blank, don't add it to the lines list 
                 if (String.IsNullOrWhiteSpace(line))
                 {
-                    break; 
+                    break;
                 }
 
                 // if a line starts with a '#', don't add it to the lines list as it is a comment
                 if (!line.StartsWith("#"))
                 {
                     lines.Add(line);
-                    _cols = Math.Max(_cols, line.Length); 
+                    _cols = Math.Max(_cols, line.Length);
                 }
             }
 
@@ -84,7 +84,7 @@ namespace Millie_Quest_for_Dinner
             _tiles = new Tile[_rows, _cols];
 
             char kind;
-            GameObject g; 
+            GameObject g;
 
             for (int y = 0; y < _rows; y++)
             {
@@ -104,7 +104,7 @@ namespace Millie_Quest_for_Dinner
                         tile.AssignTileType('o'); // if a tile type is not specified, create an air tile by default
                         g = GameObject.CreateGameObject(kind);
                         g.Initialize(); // assigns a collision layer and bitmap name
-                        g.LoadWorldPosition(y, x); 
+                        g.LoadWorldPosition(y, x);
                         _objects.Add(g);
                     }
 
@@ -117,30 +117,32 @@ namespace Millie_Quest_for_Dinner
                     }
                     catch (IndexOutOfRangeException e)
                     {
-                        Console.WriteLine(e.Message); 
+                        Console.WriteLine(e.Message);
                     }
                 }
             }
         }
 
         /// <summary>
-        /// A method that returns a tile at a specific location. Used 
-        /// during collision checking to return tile where collision occured
+        /// A method that returns the tile holding the coordinates passed in
         /// </summary>
         /// <param name="x">X coordinate</param>
         /// <param name="y">Y coordinate</param>
         /// <returns>A tile object with x and y coordinates equal to the ones passed in</returns>
         public static Tile GetTile(double x, double y)
         {
+            x = Math.Round(x);
+            y = Math.Round(y);
+
             foreach (Tile t in _tiles)
             {
                 if (t.X == x && t.Y == y)
                 {
-                    return t; 
+                    return t;
                 }
             }
 
-            return null; 
+            return null;
         }
     }
 }

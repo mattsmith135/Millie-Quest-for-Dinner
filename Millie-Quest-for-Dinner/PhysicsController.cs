@@ -9,7 +9,7 @@ namespace Millie_Quest_for_Dinner
     /// <summary>
     /// The physics controller class is responsible for checking collisions and moving the player (among other things) 
     /// It has been made static so that it does not need to be instantiated everytime we want to use it in a different class.
-    /// This class is largely unfinished and contains alternate methods for checking collisions
+    /// This class is largely unfinished and contains a variety of methods for checking collisions
     /// </summary>
     public class PhysicsController
     {
@@ -78,28 +78,28 @@ namespace Millie_Quest_for_Dinner
             double fromY = Math.Min(c1.Y, newY);
             double toX = Math.Max(c1.X, newX);
             double toY = Math.Max(c1.Y, newY);
-            
-            /*
+
             // get the tile locations
-            double fromTileX; 
-            double fromTileY;
-            double toTileX;
-            double toTileY;
+            /* 
+            int fromTileX; 
+            int fromTileY; 
+            int toTileX; 
+            int toTileY; 
+            */
 
-            double mapWidth = TileMap.Cols * Settings.TILESIZE; 
+            double mapWidth = TileMap.Cols * Settings.TILESIZE;
 
-            for (double x = fromTileX; x <= toTileX; x++)
+            for (double x = fromX; x <= toX; x++)
             {
-                for (int y = fromTileY; y <= toTileY; y++)
+                for (double y = fromY; y <= toY; y++)
                 {
-                    if (x < 0 || x >= (mapWidth) || TileMap.GetTile(x, y) != null)
+                    if (x < 0 || x >= (mapWidth) || (TileMap.GetTile(x, y) != null)) 
                     {
-                        // collisions found, return the tile
+                        // collision found with solid tile...return the tile
                         return TileMap.GetTile(x, y); 
                     }
                 }
             }
-            */
 
             // no collisions found, return null
             return null; 
@@ -137,7 +137,7 @@ namespace Millie_Quest_for_Dinner
 
             if (tile == null)
             {
-                _p.X = newX; 
+                _p.X = newX;
             } else
             {
                 if (dx > 0)
@@ -175,10 +175,10 @@ namespace Millie_Quest_for_Dinner
             {
                 if (dy > 0)
                 {
-                    // player is moving up, line up with bottom of tile
+                    // player is moving down, line up with top of tile
                 } else if (dy < 0)
                 {
-                    // player is moving down, line up with top of tile
+                    // player is moving up, line up with bottom of tile
                 }
             }
         }
